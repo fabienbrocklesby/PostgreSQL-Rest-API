@@ -7,3 +7,12 @@ export const index = async (request, response, next) => {
     next(error);
   }
 };
+
+export const createPost = async (request, response, next) => {
+  try {
+    const data = await postService.createPost(request.body);
+    response.json(data);
+  } catch (error) {
+    next(error);
+  }
+};
