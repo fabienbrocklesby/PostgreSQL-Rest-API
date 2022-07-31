@@ -1,8 +1,5 @@
-import * as postModel from './post.model.js';
-import postValidator from '../../validators/post.validator.js';
+import * as postModel from './post.model';
 
 export const index = () => postModel.index();
 
-export const createPost = async ({ title, body }) => {
-    return postModel.createPost({ title, body });
-};
+export const createPost = async ({ title, body }) => postModel.createPost({ title, body });

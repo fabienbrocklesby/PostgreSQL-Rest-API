@@ -1,4 +1,4 @@
-import * as postService from './post.service.js';
+import * as postService from './post.service';
 
 export const index = async (request, response, next) => {
   try {

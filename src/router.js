@@ -1,4 +1,4 @@
-import * as postController from './modules/posts/post.controller.js';
+import * as postController from './modules/posts/post.controller';
 
 export default (route) => {
   // Post Operations
