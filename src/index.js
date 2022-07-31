@@ -1,7 +1,8 @@
 import 'dotenv/config.js';
 import express from 'express';
 import cors from 'cors';
-import {db} from './utils/database.js';
+
+import routes from './router.js';
 
 const app = express();
 
@@ -12,10 +13,6 @@ app.use(cors({ exposedHeaders: ['x-session-id'] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (request, response) => {
-    console.log('Hello From App 👋');
-});
-
-db;
+routes(app);
 
 app.listen(port, '0.0.0.0', () => console.log(`Server running on port ${port}! 🌏🚀`));
